@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.db.project.view.LoginControl">
+   <children>
+      <AnchorPane maxWidth="600.0" minHeight="500.0" minWidth="460.0" onKeyPressed="#handleKey" prefHeight="310.0" prefWidth="0.0">
+         <children>
+            <ImageView fitHeight="519.0" fitWidth="956.0" layoutX="-153.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@background.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="40.0" text="Login" textFill="#adadad">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+            <Label layoutX="130.0" layoutY="130.0" textFill="#d5d5d5" />
+            <Label layoutX="130.0" layoutY="185.0" textFill="#d5d5d5" />
+            <JFXTextField fx:id="user" focusColor="#f9f9f9" labelFloat="true" layoutX="127.0" layoutY="145.0" prefHeight="23.0" prefWidth="209.0" promptText="Username" style="-fx-text-fill: white;" unFocusColor="#d5d5d5" />
+            <JFXPasswordField fx:id="pass" focusColor="#c8c9cb" labelFloat="true" layoutX="126.0" layoutY="200.0" onKeyPressed="#handleKey" prefHeight="23.0" prefWidth="209.0" promptText="Password" style="-fx-text-fill: white;" unFocusColor="#d5d5d5" />
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="298.0" onAction="#Login" onKeyPressed="#handleKey" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #cc5761;" text="Sign in" textFill="#e6dfdf">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="355.0" onAction="#signup" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #639af2;" text="Sign up" textFill="#e6dfdf">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="error" layoutX="128.0" layoutY="243.0" text="Wrong credentials !" textFill="RED" visible="false" />
+            <Hyperlink layoutX="268.0" layoutY="240.0" onAction="#forgot" text="You Forgot ?" textFill="#d5d5d5" />
+            <JFXSpinner fx:id="wait" layoutX="207.0" layoutY="416.0" progress="1.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
